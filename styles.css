@@ -28,6 +28,9 @@ hr{
     margin-bottom: 0;
 }
 
+.HitYoshino_p {
+    margin: 0;
+}
 .navContainer {
     padding: var(--s) var(--m);
     background-color: #396dff;
