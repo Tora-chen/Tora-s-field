@@ -1,0 +1,25 @@
+.playField {
+    margin: 24;
+    text-align: center;
+}
+.HitYoshino_p {
+    margin: 0;
+    color: rgb(205, 206, 207);
+}
+.center {
+    text-align: center;
+}
+.exit {
+    font-family: sans-serif, '黑体';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid rgba(251, 62, 235, 0.6);
+    background: rgba(249, 108, 171, 0.3);
+    color: rgba(254, 2, 183, 0.6);
+    box-shadow: 1px 1px 2px rgba(250, 101, 168, 0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: inline-block;
+    cursor: pointer;
+}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
+    <link rel="icon" href="Yosino_O.png">
+    <link rel="stylesheet" href="HitYoshino.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +11,40 @@
 </head>
 
 <body>
-    <h1>Here is HitYoshino</h1>
+    <section class="playField">
+        <img src="hit-1.jpg" width="65%" id="picture" onclick="play()" />
+        <audio id="musicPlayer" src="bgm.mp3"></audio>
+        <audio id="hit.wav" src="hit.wav"></audio>
+        <p class="HitYoshino_p"><i> ↑↑↑↑ </i></p>
+        <p class="HitYoshino_p"><i>点我打芳乃</i></p>
+    </section>
+    <section class="center">
+        <a href="index.html">
+            <p class="exit">今天打到这里\(￣▽￣)/</p>
+        </a>
+    </section>
+    <script>
+        var musicPlayer = document.getElementById('musicPlayer');
+        var playButton = document.getElementById('picture');
+        var hitVoice = document.getElementById("hit.wav");
+        var isFirstClick = true;
+        var picture = document.getElementById('picture');
+        function play() {
+            if (isFirstClick) {
+                musicPlayer.play();
+                isFirstClick = false;
+            } else {
+                hit();
+            }
+        }
+        function hit() {
+            hitVoice.play();
+            picture.src = "hit-main.jpg";
+            setTimeout(() => {
+                picture.src = "hit-2.jpg";
+            }, 200);
+        }
+    </script>
 </body>
 
 </html>
