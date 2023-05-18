@@ -12,9 +12,10 @@
 
 <body>
     <section class="playField">
-        <img src="hit-1.jpg" width="65%" id="picture" onclick="play()" />
+        <img src="hit-1.jpg" width="65%" id="picture" onclick="click_pic()" />
         <audio id="musicPlayer" src="bgm.mp3"></audio>
         <audio id="hit.wav" src="hit.wav"></audio>
+        <audio id="n.wav" src="n.wav"></audio>
         <p class="HitYoshino_p"><i> ↑↑↑↑ </i></p>
         <p class="HitYoshino_p"><i>点我打芳乃</i></p>
     </section>
@@ -26,10 +27,11 @@
     <script>
         var musicPlayer = document.getElementById('musicPlayer');
         var playButton = document.getElementById('picture');
-        var hitVoice = document.getElementById("hit.wav");
+        var hitVoice = document.getElementById('hit.wav');
+        var nVoice = document.getElementById('n.wav');
         var isFirstClick = true;
         var picture = document.getElementById('picture');
-        function play() {
+        function click_pic() {
             if (isFirstClick) {
                 musicPlayer.play();
                 isFirstClick = false;
@@ -38,11 +40,14 @@
             }
         }
         function hit() {
+            nVoice.currentTime = 0;
+            hitVoice.currentTime = 0;
+            nVoice.play();
             hitVoice.play();
             picture.src = "hit-main.jpg";
             setTimeout(() => {
                 picture.src = "hit-2.jpg";
-            }, 200);
+            }, 300);
         }
     </script>
 </body>
