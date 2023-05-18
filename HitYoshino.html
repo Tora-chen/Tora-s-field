@@ -16,8 +16,12 @@
         <audio id="musicPlayer" src="bgm.mp3"></audio>
         <audio id="hit.wav" src="hit.wav"></audio>
         <audio id="n.wav" src="n.wav"></audio>
+        <audio id="Ciallo.wav" src="Ciallo.wav"></audio>
         <p class="HitYoshino_p"><i> ↑↑↑↑ </i></p>
         <p class="HitYoshino_p"><i>点我打芳乃</i></p>
+    </section>
+    <section class="center">
+        <p id="Ciallo" class="exit" onclick="click_Ciallo()">Ciallo~(∠・ω< )⌒★</p>
     </section>
     <section class="center">
         <a href="index.html">
@@ -26,11 +30,18 @@
     </section>
     <script>
         var musicPlayer = document.getElementById('musicPlayer');
-        var playButton = document.getElementById('picture');
+        var picture = document.getElementById('picture');
         var hitVoice = document.getElementById('hit.wav');
         var nVoice = document.getElementById('n.wav');
+        var CialloVoice = document.getElementById('Ciallo.wav');
+        function click_Ciallo() {
+            CialloVoice.play();
+            picture.src = "Ciallo.jpg";
+            setTimeout(() => {
+                picture.src = "After-Ciallo.jpg";
+            }, 1000);
+        }
         var isFirstClick = true;
-        var picture = document.getElementById('picture');
         function click_pic() {
             if (isFirstClick) {
                 musicPlayer.play();
@@ -47,7 +58,7 @@
             picture.src = "hit-main.jpg";
             setTimeout(() => {
                 picture.src = "hit-2.jpg";
-            }, 300);
+            }, 400);
         }
     </script>
 </body>

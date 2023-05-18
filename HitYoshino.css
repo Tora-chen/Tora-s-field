@@ -12,7 +12,6 @@
 .exit {
     font-family: sans-serif, '黑体';
     letter-spacing: 1px;
-    text-transform: uppercase;
     text-align: center;
     border: 2px solid rgba(251, 62, 235, 0.6);
     background: rgba(249, 108, 171, 0.3);
