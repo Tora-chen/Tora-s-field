@@ -32,13 +32,46 @@ hr{
     margin: 0;
 }
 .navContainer {
-    padding: var(--s) var(--m);
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
     background-color: #396dff;
 }
 
-.navTitle {
-    margin: 0;
+.logoBox {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    font-size: x-large;
+    font-weight: bolder;
+    text-decoration: none;
     color: #fff;
+    display: block;
+}
+.items {
+    text-align: center;
+    flex:auto;
+}
+.itemList {
+    list-style: none;
+}
+.itemLink {
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+    display: flex;
+    padding-inline-start: 0;
+}
+li {
+    color: #fff;
+    display: inline-block;
+    margin: auto;
+}
+.emptyLogoBox {
+    flex: 2;
 }
 
 .sec1 {
